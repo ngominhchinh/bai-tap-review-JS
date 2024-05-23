@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div>
+        <label>Nhap ten</label>
+        <input type="text" id="name">
+        <button id="btn">Kiem tra</button>
+    </div>
+   
+
+    <script src="./index.js"></script>
+    <script>
+        document.getElementById("btn").onclick = ()=>{
+            let str = document.getElementById("name").value;
+            isFirstLetterUppercase(str);
+        }
+    </script>
+</body>
+</html>
