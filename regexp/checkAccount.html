@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkAccount(str){
+            let regexp = /^[a-z0-9_]{6,}$/;
+            if(regexp.test(str)){
+                console.log("Tai khoan hop le");
+            }else{
+                console.log("Tai khoan khong hop le");
+            }
+        }
+        let str = '123abc_';
+        checkAccount(str);
+
+    </script>
+</body>
+</html>
