@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<input type="text" id="animalName">
+<button id="btn-add">Add</button>
+
+<p id="show"></p>
+<body>
+    <script>
+        const animals = new Set();
+        document.getElementById("btn-add").onclick = ()=>{
+            let name = document.getElementById("animalName").value;
+            animals.add(name);
+            show();
+
+        }
+        
+        function show(){
+            let html = ``;
+            for(let item of animals){
+                html += `<p>${item} <button id="${item}" onclick="deleteItem('${item}')">Delete</button></p>`;
+            }
+            document.getElementById("show").innerHTML = html;
+        }      
+        
+        function deleteItem(item){
+            animals.delete(item);
+            show();
+        }
+    </script>
+</body>
+</html>
