@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class ThongTin{
+            constructor(ten,moTa){
+                this.ten = ten;
+                this.moTa = moTa;
+            }
+            static tinhToan(giaTri=1){
+                return giaTri * 3;
+            }
+        }
+        class HinhHoc extends ThongTin{
+            constructor(ten,moTa,chieuDai){
+                super(ten,moTa);
+                this.chieuDai = chieuDai;
+            }
+            tinhToan(giaTri=1){ 
+                return giaTri * chieuDai;
+            }
+        }
+
+    </script>
+</body>
+</html>
